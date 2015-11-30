@@ -1,0 +1,51 @@
+{
+  "name": "vk-grabber",
+  "version": "1.0.0",
+  "description": "",
+  "main": "grab.js",
+  "dependencies": {
+    "apidoc": "^0.13.1",
+    "co": "^4.6.0",
+    "co-body": "^4.0.0",
+    "co-suspend": "^0.1.6",
+    "colors": "^1.1.2",
+    "crypto": "0.0.3",
+    "debug": "^2.2.0",
+    "koa": "^1.1.0",
+    "koa-bodyparser": "^2.0.1",
+    "koa-cors": "0.0.16",
+    "koa-static": "^1.5.1",
+    "mime-types": "^2.1.7",
+    "mysql-co": "0.0.4",
+    "mysql2-promise": "^0.1.3",
+    "node-rest-client": "^1.5.1",
+    "node-uuid": "^1.4.3",
+    "progress": "^1.1.8",
+    "q": "^1.4.1",
+    "q-io": "^1.13.1",
+    "restler": "^3.4.0",
+    "surface": "^0.7.12",
+    "underscore": "^1.8.3",
+    "valid-url": "^1.0.9",
+    "webdriverio": "^3.2.1",
+    "xml2js": "^0.4.13"
+  },
+  "scripts": {
+    "install": "./node_modules/.bin/apidoc -i lib/controllers -o doc",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "babel-node": "babel-node --stage 0",
+    "start": "babel-node --stage 0 test.jsx",
+    "serve-static": "./node_modules/.bin/http-server images -p 3001",
+    "serve-rest": "./node_modules/.bin/apidoc -i lib/controllers -o doc && DEBUG=image_fetcher* babel-node --harmony server.jsx",
+    "serve-app": "babel-node --harmony app.jsx"
+  },
+  "apidoc": {
+    "name": "example",
+    "version": "0.1.0",
+    "description": "apiDoc basic example",
+    "title": "Custom apiDoc browser title",
+    "url": "https://api.github.com/v1"
+  },
+  "author": "",
+  "license": "ISC"
+}

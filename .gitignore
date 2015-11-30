@@ -1,0 +1,7 @@
+config.js
+images/*
+!images/favicon.ico
+.idea
+doc
+bower_components
+node_modules
